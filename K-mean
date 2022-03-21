@@ -16,7 +16,6 @@ plot(x1,y1,'b.','MarkerSize',16);
 xlabel('Sensor 200 (T x 10^-12)'); ylabel('Sensor 233 (T x 10^-12)');
 set(gca,'Xticklabel', {'-8','-6','-4','-2','0','2','4'});
 set(gca,'Yticklabel', {'-6','-4','-2','-0','2','4','6'});
-hold on
 
 x2 = X(IDX==2,1); y2 = X(IDX==2,2); 
 plot(x2,y2,'r.','MarkerSize',16);
@@ -28,7 +27,7 @@ x5 = X(IDX==5,1); y5 = X(IDX==5,2);
 plot(x5,y5,'m.','MarkerSize',16);
 
 
-%K-Means Replicates
+%%K-Means Replicates
 load('kmeans_results.mat');
 load('MEG_decoding_data_final.mat');
 X = MEG_data(:,[200,233]);
